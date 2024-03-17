@@ -1,0 +1,25 @@
+<ivy-module version="2.0">
+    <info organisation="your-organisation" module="your-module-name"/>
+    <configurations>
+        <conf name="compile" description="Required to compile application"/>
+        <conf name="test" description="Required for test compilation and execution"/>
+        <conf name="runtime" extends="compile" description="Additional runtime dependencies"/>
+    </configurations>
+    <dependencies>
+        <!-- JUnit Jupiter API -->
+        <dependency org="org.junit.jupiter" name="junit-jupiter-api" rev="5.7.0" conf="test->default"/>
+        <dependency org="org.junit.jupiter" name="junit-jupiter-engine" rev="5.7.0" conf="test->default"/>
+        <dependency org="org.junit.jupiter" name="junit-jupiter-params" rev="5.7.0" conf="test->default"/>
+
+        <!-- JUnit Platform -->
+        <dependency org="org.junit.platform" name="junit-platform-commons" rev="1.7.0" conf="test->default"/>
+        <dependency org="org.junit.platform" name="junit-platform-engine" rev="1.7.0" conf="test->default"/>
+        <dependency org="org.junit.platform" name="junit-platform-launcher" rev="1.7.0" conf="test->default"/>
+        <dependency org="org.junit.platform" name="junit-platform-runner" rev="1.7.0" conf="test->default"/>
+        <dependency org="org.junit.platform" name="junit-platform-suite-api" rev="1.7.0" conf="test->default"/>
+
+        <!-- Additional dependencies used by JUnit -->
+        <dependency org="org.apiguardian" name="apiguardian-api" rev="1.1.0" conf="test->default"/>
+        <dependency org="org.opentest4j" name="opentest4j" rev="1.2.0" conf="test->default"/>
+    </dependencies>
+</ivy-module>   
